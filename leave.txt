@@ -1,4 +1,4 @@
-# TCP/IP ICMP Echo Request
+# TCP/IP ICMP Echo Requests
 [3,1000]
 <ICMP Echo Request>
 {
