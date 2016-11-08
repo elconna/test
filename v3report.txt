@@ -1,0 +1,40 @@
+# TCP/IP ICMP Echo Request
+[1000000,0]
+<ICMP Echo Request>
+{
+# Ethernet HEADER -----
+
+  00 04 80 9b 78 00  # Destination MAC
+  00 50 BA 2C 70 E1  # Source MAC
+  08 00              # Protocol
+
+# IP HEADER -----------
+  45                 # Version / Header Length
+  00                 # Type of service
+  00 3c              # Total length
+  00 a5              # Identification
+  00 00              # Flags / Fragment offset
+  80                 # Time to live
+  02                 # Protocol
+  b8 c8              # Checksum
+  c0 a8 00 02        # Source address
+  c0 a8 00 01        # Destination address   V3=224.0.0.22
+
+# IGMP V3 REPORT ---------
+  22                 # Type (V1=12, V2=16, V2L=17)
+  00                 # Reseved
+  4a 5c              # Checksum
+  02 00              # Reseved
+  01 00              # Number of Group Records
+  61 62 63 64        # Group Record [1]
+}
+
+# IGMP V3 QUERY ---------
+  11                 # Type
+  64                 # Max Response Time (.1sec) default 100
+  4a 5c              # Checksum (of IGMP message)
+  E1 00 00 01        # Group Address
+  00                 # Resv|S|QRV   (V3 only)
+  00                 # QQIC
+  00 00              # Number of Sources
+  61 62 63 64        # Source Address [1]
