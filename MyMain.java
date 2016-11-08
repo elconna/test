@@ -4,7 +4,7 @@ import java.io.*;
 
 public class MyMain
 {
-	public static int DELAY = 50;
+	public static int DELAY = 100;
 	public static int NUM_CLIENT = 256;
 	public static int BASE_PORT = 9000;
 	public static MClient[] mclient = new MClient[4096];
